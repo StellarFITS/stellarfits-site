@@ -98,7 +98,9 @@ StellarFITS is new and few people have downloaded it yet - it doesn't mean anyth
 your download is exactly the file we published:</p>
 <ol class="steps">
 <li>Open your <b>Downloads</b> folder, right-click an empty space and choose <b>Open in Terminal</b>.</li>
-<li>Type <code>Get-FileHash StellarFITS-Setup.exe</code> and press <span class="key">Enter</span>.</li>
+<li>Type <code>Get-FileHash StellarFITS-Setup.exe</code> and press <span class="key">Enter</span>.
+If it says "not recognized", the terminal is Command Prompt - type
+<code>certutil -hashfile StellarFITS-Setup.exe SHA256</code> instead.</li>
 <li>The long code under <b>Hash</b> should be exactly the same as the one on the website.</li>
 </ol>
 </section>
@@ -191,6 +193,8 @@ StellarFITS never changes your FITS files or your pictures.</p>
 <tr><td>Antivirus blocks it</td><td>Please email us its message - new programs are sometimes flagged by mistake.</td></tr>
 <tr><td>Can't find StellarFITS</td><td>Press the Windows key and type <b>StellarFITS</b>.</td></tr>
 <tr><td>Slow the very first time</td><td>Normal - Windows and your antivirus check a new program on its first start.</td></tr>
+<tr><td>"StarNet2 can't start" / "MSVCP140.dll was not found"</td><td>StarNet2 needs Microsoft's <b>Visual C++ Redistributable</b>, which newer PCs may not have yet. Install it free from Microsoft (<a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">vc_redist.x64.exe</a>), then try again - no restart needed.</td></tr>
+<tr><td>Checking a download's SHA-256 says "not recognized"</td><td>The terminal opened as Command Prompt: type <code>certutil -hashfile StellarFITS-Setup.exe SHA256</code> instead.</td></tr>
 </table>
 <p>Anything else: <a href="mailto:support@stellarfits.co.uk">support@stellarfits.co.uk</a> - a screenshot of what you see helps a lot.</p>
 </section>
